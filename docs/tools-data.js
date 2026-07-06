@@ -503,4 +503,6 @@ const TOOLS_DATA = [
   // ===== 办公与开发 (1款) =====
   {id:395,name:"Coze",nameEn:"Coze",desc:"字节跳动推出的AI Bot构建平台，零代码创建AI助手",category:"办公与开发",tags:["Bot","零代码","免费"],url:"https://www.coze.com",logo:"https://favicon.im/coze.com?larger=true",pricing:"免费",featured:false,review:"【功能特色】AI工具。字节跳动推出的AI Bot构建平台，零代码创建AI助手。免费使用。\n【适用人群】各类用户。\n【推荐指数】★★★★☆"},
 
+  {id:481,name:"情绪调色板",nameEn:"Mood Palette",desc:"基于色彩心理学的交互式情绪配色工具，12种情绪、智能调色、实时预览、一键导出，专为自媒体创作者与设计师打造",category:"设计与创意",tags:["配色","设计","调色板","免费","情绪"],url:"https://yxj325.github.io/mood-palette/",logo:"docs/logos/mood-palette.svg",pricing:"免费",featured:true,review:"【功能特色】情绪化配色工具。基于色彩心理学提供12种情绪配色方案，支持饱和度/亮度/色相微调、文字配色实时预览、5种格式导出（CSS/JSON/SCSS/Tailwind/渐变）与情绪日记，数据完全本地保存。\n【适用人群】自媒体创作者、UI/平面设计师、PPT制作者、品牌设计人员。\n【推荐指数】★★★★★"},
+
 ];
