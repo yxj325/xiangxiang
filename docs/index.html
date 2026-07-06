@@ -211,5 +211,14 @@
       </div>
     </div>
   </div>
+
+  <!-- ===== 访问统计（51.la · 免费 · 国内可用）=====
+       使用步骤：
+       1. 打开 https://www.51.la/ 免费注册并「添加网站」（建议为导航站单独建一个站点）
+       2. 在获取到的代码中找到 id 与 ck 两个值
+       3. 把下面的 LA_ID_PLACEHOLDER / LA_CK_PLACEHOLDER 替换掉即可开始追踪
+  -->
+  <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({id:"LA_ID_PLACEHOLDER",ck:"LA_CK_PLACEHOLDER",autoTrack:true});</script>
 </body>
 </html>
