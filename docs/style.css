@@ -226,6 +226,44 @@ button { cursor: pointer; font-family: inherit; }
 .pricing-free { background: #ECFDF5; color: #059669; }
 .pricing-paid { background: #FEF3C7; color: #D97706; }
 .pricing-freemium { background: #EEF2FF; color: #4F46E5; }
+.tag-freemium { background: #EEF2FF; color: #4F46E5; }
+
+/* ========== 工具详情弹窗 ========== */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+  z-index: 2000; display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 20px;
+}
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal-content {
+  background: var(--bg-card); border-radius: 20px; max-width: 560px; width: 100%;
+  max-height: 85vh; overflow-y: auto; position: relative;
+  box-shadow: var(--shadow-lg); transform: scale(0.9); transition: transform 0.3s ease;
+}
+.modal-overlay.active .modal-content { transform: scale(1); }
+.modal-close {
+  position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+  border-radius: 50%; border: none; background: var(--primary-light); color: var(--text);
+  font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  z-index: 1; transition: var(--transition);
+}
+.modal-close:hover { background: var(--primary); color: white; }
+.modal-header { display: flex; gap: 16px; padding: 28px 28px 16px; align-items: center; }
+.modal-logo { flex-shrink: 0; }
+.modal-title-wrap h2 { font-size: 22px; font-weight: 800; }
+.modal-name-en { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+.modal-body { padding: 0 28px 20px; }
+.modal-desc { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 16px; }
+.modal-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.modal-meta { display: flex; gap: 16px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.modal-meta-item { font-size: 13px; color: var(--text-secondary); font-weight: 600; }
+.modal-review { background: var(--primary-light); border-radius: 12px; padding: 16px; }
+.review-line { font-size: 13px; line-height: 1.8; display: flex; gap: 4px; }
+.review-label { font-weight: 700; color: var(--primary); white-space: nowrap; }
+.review-text { color: var(--text); }
+.modal-footer { padding: 16px 28px 24px; text-align: center; border-top: 1px solid var(--border); }
+.modal-footer .btn { padding: 10px 32px; font-size: 15px; }
 
 /* ========== 加载更多 ========== */
 .load-more { text-align: center; padding: 20px 0; }
