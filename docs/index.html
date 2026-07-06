@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI工具导航 - 发现最优质的AI工具</title>
-  <meta name="description" content="收录300+优质AI工具，按场景分类，帮助你快速找到最适合的AI助手。涵盖写作、绘画、视频、编程、学习等全场景。">
+  <meta name="description" content="收录500+优质AI工具，按场景分类，含详细评测和Logo，帮助你快速找到最适合的AI助手。涵盖写作、绘画、视频、编程、学习等全场景。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -185,5 +185,31 @@
 
   <script src="tools-data.js"></script>
   <script src="script.js"></script>
+
+  <!-- 工具详情弹窗 -->
+  <div class="modal-overlay" id="toolModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-header">
+        <div class="modal-logo" id="modalLogo"></div>
+        <div class="modal-title-wrap">
+          <h2 id="modalName"></h2>
+          <p id="modalNameEn" class="modal-name-en"></p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-tags" id="modalTags"></div>
+        <div class="modal-meta">
+          <span class="modal-meta-item" id="modalCategory"></span>
+          <span class="modal-meta-item" id="modalPricing"></span>
+        </div>
+        <div class="modal-review" id="modalReview"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" id="modalLink" target="_blank" rel="noopener" class="btn btn-primary">访问官网 ↗</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
