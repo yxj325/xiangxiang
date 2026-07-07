@@ -200,6 +200,8 @@ function showToolDetail(id) {
   }
 
   document.getElementById('modalLink').href = tool.url;
+  document.getElementById('modalLink').onclick = () => trackEvent('tool_visit', { name: tool.name });
+  trackEvent('tool_view', { name: tool.name, category: tool.category });
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -260,6 +262,7 @@ function handleSearch(val) {
   window._searchTimer = setTimeout(() => {
     applyFilters();
     if (currentSearch.length > 0) {
+      trackEvent('search', { q: currentSearch });
       const section = document.getElementById('all-tools');
       if (section) section.scrollIntoView({ behavior: 'smooth' });
     }
